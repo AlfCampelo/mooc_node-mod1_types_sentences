@@ -16,13 +16,20 @@ console.log(`\n Número PI con seis decimales: ${numPi}`);
 
 //Tabla con números de 0 a 22 en decimal, hexadecimal, octal y binario
 let numero = 22;
+console.log();
 function tablaNumerica(n){
 	let hex = (n).toString(16);
 	let oct = (n).toString(8);
 	let bin = (n).toString(2);
-	console.log(`\n ${n} dec = ${hex} hex = ${oct} oct = ${bin} bin`);
+	console.log(`${n} dec = ${hex} hex = ${oct} oct = ${bin} bin`);
 }
 
 for(let i = 0; i <= numero; i++){
 	tablaNumerica(i);
+}
+console.log();
+for(let i = 0; i < numero; i++){
+	if(i % 2 !== 0 && (i < 10 || i > 20 )){
+		tablaNumerica(i);
+	}
 }
