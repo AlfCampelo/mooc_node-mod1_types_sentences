@@ -11,3 +11,6 @@ if(hora >6 && hora < 13){
 	saludo = '\n Buenas noches'
 }
 console.log(`${saludo}, son las ${hora} horas`);
+//Número PI con seis decimales
+let numPi = Math.PI.toFixed(6);
+console.log(`\n Número PI con seis decimales: ${numPi}`);
