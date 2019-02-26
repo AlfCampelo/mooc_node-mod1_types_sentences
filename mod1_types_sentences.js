@@ -27,9 +27,15 @@ function tablaNumerica(n){
 for(let i = 0; i <= numero; i++){
 	tablaNumerica(i);
 }
+//Tabla con números impares sin incluir del 10 al 20
 console.log();
 for(let i = 0; i < numero; i++){
 	if(i % 2 !== 0 && (i < 10 || i > 20 )){
 		tablaNumerica(i);
 	}
 }
+//Hola en chino
+console.log();
+console.log(`\u55e8\uff0c\u4f60\u597d\u5417`);
+console.log();
+console.log('The program has finished');
