@@ -21,9 +21,7 @@ let error_critical = null;
 let output = "";
 const EXPECTED = `
 Good morning, its 11 hours
-
 Número PI con 6 decimales: 3.141593
-
 0 dec = 0 hex = 0 oct = 0 bin
 1 dec = 1 hex = 1 oct = 1 bin
 2 dec = 2 hex = 2 oct = 10 bin
@@ -45,15 +43,12 @@ Número PI con 6 decimales: 3.141593
 18 dec = 12 hex = 22 oct = 10010 bin
 19 dec = 13 hex = 23 oct = 10011 bin
 20 dec = 14 hex = 24 oct = 10100 bin
-
 1 dec = 1 hex = 1 oct = 1 bin
 3 dec = 3 hex = 3 oct = 11 bin
 5 dec = 5 hex = 5 oct = 101 bin
 7 dec = 7 hex = 7 oct = 111 bin
 9 dec = 9 hex = 11 oct = 1001 bin
-
 Hola in chino se escribe así:  嗨，你好吗
-
 The programa ha acabado de ejecutar: Tue Sep 04 2018 11:07:56 GMT+0200 (Romance Daylight Time)
 `;
 const EXPECTED_OUTPUT_LENGTH = EXPECTED.split(/\r?\n\r?\n/).length;
@@ -87,13 +82,13 @@ describe("mooc_node-mod1_types_sentences", function () {
                 this.msg_err = `Error running the file.\n\t\t\tReceived: ${error_exe}`;
                 error_critical = this.msg_err;
             } else {
-                output = output.split('', async function () { this.name = /\r?\n\r?\n/);
+                output = output.split(/\r?\n\r?\n/);
             }
             should.not.exist(error_exe);
         }
     });
 
-    it(`3: Checking the output length`;
+    it('', async function () { this.name = `3: Checking the output length`;
         this.score = 1.5;
         if (error_critical) {
             this.msg_err = error_critical;
@@ -104,7 +99,7 @@ describe("mooc_node-mod1_types_sentences", function () {
             this.msg_err = `Unexpected output length.\n\t\t\tExpected: ${EXPECTED_OUTPUT_LENGTH} blocks\n\t\t\tRead: ${output_length} blocks`;
             output_length.should.be.equal(EXPECTED_OUTPUT_LENGTH)
         }
-    });
+      });
 
     it('', async function () { this.name = `4: Checking the initial greeting`;
         this.score = 1.5;
