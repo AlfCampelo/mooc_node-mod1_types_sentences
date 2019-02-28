@@ -4,7 +4,7 @@ let hora = new Date().getHours();
 
 if(hora > 6 && hora <= 12){
 	saludo = '\n Buenos días';
-}else if(hora < 22){
+}else if(hora > 12 && hora < 22){
 	saludo = '\n Buenas tardes';
 }else{
 	saludo = '\n Buenas noches';
